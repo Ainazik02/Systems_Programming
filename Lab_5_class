@@ -1,0 +1,36 @@
+#include <stdio.h> 
+
+typedef struct Books { 
+char title[10]; 
+char author[15]; 
+int book_id; 
+
+}Books; 
+
+
+void printBook(struct Books theBook){ //*theBook ( pointer:11,12,31)
+printf("The id of book1 is: %d\n", theBook.book_id); //theBook->book_id
+printf("The title of book1 is: %s\n", theBook.title); 
+
+} 
+
+
+int main(void) { 
+
+Books book1; //book instead struct
+Books book2; 
+
+book1.book_id=1234; 
+strcpy(book1.title,"System Programming"); 
+
+
+book2.book_id=111114; 
+strcpy(book2.title,"C language "); 
+
+
+printBook(book1); //&book1
+printBook(book2); 
+
+
+
+}
